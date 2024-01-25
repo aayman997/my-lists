@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	color      : theme('colors.slate.700');
+	background : theme('colors.slate.100');
+}
+
+@layer components {
+	.primary-button {
+		@apply px-4 py-1 border border-white font-medium rounded-md justify-center items-center capitalize flex gap-x-1 hover:bg-green-400
+		hover:text-white transition-all duration-300;
+
+		&.border-brand {
+			@apply border-green-500;
+		}
+
+		&.small {
+			@apply px-2 py-1.5 text-sm;
+		}
+
+	}
+}
